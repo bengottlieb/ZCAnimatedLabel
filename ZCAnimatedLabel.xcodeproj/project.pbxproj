@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		B5C105351E43BC3D00FA7E92 /* Build Framework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B5C105361E43BC3D00FA7E92 /* Build configuration list for PBXAggregateTarget "Build Framework" */;
+			buildPhases = (
+				B5C105391E43BCBA00FA7E92 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "Build Framework";
+			productName = Framework;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		163448ED1AA40E8C00A9D205 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 163448EC1AA40E8C00A9D205 /* CoreText.framework */; };
 		16668AFE1AB049FA0047B706 /* ZCAnimatedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 16668AE51AB049FA0047B706 /* ZCAnimatedLabel.m */; };
@@ -104,6 +118,7 @@
 		B5C104FE1E43959B00FA7E92 /* AnimatedLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AnimatedLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5C105001E43959B00FA7E92 /* AnimatedLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimatedLabel.h; sourceTree = "<group>"; };
 		B5C105011E43959B00FA7E92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5C1053A1E43C00300FA7E92 /* BuildFramework.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = BuildFramework.sh; path = Combined/BuildFramework.sh; sourceTree = "<group>"; };
 		C72A3A3217822EF8CDF3E13A /* Pods-ZCMorphingLabel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZCMorphingLabel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZCMorphingLabel/Pods-ZCMorphingLabel.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,6 +182,7 @@
 		16A16C471A8DCC2500F6FC41 = {
 			isa = PBXGroup;
 			children = (
+				B5C1053A1E43C00300FA7E92 /* BuildFramework.sh */,
 				16A16C521A8DCC2500F6FC41 /* ZCAnimatedLabel */,
 				16AE47AD1AB13FF8001C1C72 /* AppDelegate.h */,
 				16AE47AE1AB13FF8001C1C72 /* AppDelegate.m */,
@@ -340,6 +356,11 @@
 						DevelopmentTeam = YY6CWUX533;
 						ProvisioningStyle = Automatic;
 					};
+					B5C105351E43BC3D00FA7E92 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = YY6CWUX533;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 16A16C4B1A8DCC2500F6FC41 /* Build configuration list for PBXProject "ZCAnimatedLabel" */;
@@ -357,6 +378,7 @@
 			targets = (
 				16A16C4F1A8DCC2500F6FC41 /* Host App */,
 				B5C104FD1E43959B00FA7E92 /* AnimatedLabel */,
+				B5C105351E43BC3D00FA7E92 /* Build Framework */,
 			);
 		};
 /* End PBXProject section */
@@ -381,6 +403,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B5C105391E43BCBA00FA7E92 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = Combined/BuildFramework.sh;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		16A16C4C1A8DCC2500F6FC41 /* Sources */ = {
@@ -530,6 +568,14 @@
 			};
 			name = Debug;
 		};
+		B5C105371E43BC3D00FA7E92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = YY6CWUX533;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -553,6 +599,13 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B5C105031E43959B00FA7E92 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B5C105361E43BC3D00FA7E92 /* Build configuration list for PBXAggregateTarget "Build Framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5C105371E43BC3D00FA7E92 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
